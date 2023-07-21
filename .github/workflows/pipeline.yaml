@@ -49,7 +49,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: greetings-jar
-        path: build/libs
+        path: |
+          build/libs
+          test-script.sh
     - name: Set output
       id: setoutput
       run: echo jarpath=build/libs/greetings-add-${{ github.event.inputs.myVersion }}${{ env.TDS }}.jar >> $GITHUB_OUTPUT
