@@ -28,7 +28,7 @@ jobs:
     
     # Map a step output to a job output
     outputs:
-    artifact-path: ${{ steps.setoutput.outputs.jarpath }}
+      artifact-path: ${{ steps.setoutput.outputs.jarpath }}
 
     steps:
     - uses: actions/checkout@v3
